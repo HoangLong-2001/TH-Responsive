@@ -1,0 +1,90 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+/* Tablet & mobile */
+@media (max-width: 991.98px) {
+  /* 1. an navbar */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyen logo vao giua */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* can lai vi tri menu icon */
+  .menu-header__icon {
+    color: #fff;
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    width: 24px;
+  }
+  /*4. overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(24, 6, 6, 0.3);
+    inset: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+  }
+  /* 5. kiem tra checkbox */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-drawer {
+    position: fixed;
+    background-color: rgb(8, 34, 34);
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8 menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+    border-radius: 6px;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) and(max-width: 991.98px) {
+}
+/* Mobile */
+@media (max-width: 768px) {
+}
+/* tam an  */
+.hero,
+.footer,
+main {
+  display: none;
+}
